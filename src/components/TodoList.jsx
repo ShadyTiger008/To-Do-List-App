@@ -3,7 +3,7 @@ import { DeleteButton, EditButton } from "../Icons";
 
 const TodoList = ({ theme, listItems, searchInput, searchItems, deleteItem, editItem }) => {
   return (
-    <section className="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-5 pb-20">
+    <section className="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-5 pb-20 w-full">
       {searchInput ? (
         // Render the searched items when searchInput is not empty
         searchItems.length > 0 ? (
@@ -12,7 +12,7 @@ const TodoList = ({ theme, listItems, searchInput, searchItems, deleteItem, edit
             return (
               <div
                 key={id}
-                className={`border-2 p-5 sm:w-96 rounded-xl ${
+                className={`border-2 p-5 rounded-xl ${
                   theme === "dark" ? "text-white" : "text-black"
                 }`}
               >
