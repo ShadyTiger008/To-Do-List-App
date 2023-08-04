@@ -119,7 +119,7 @@ function App() {
   return (
     <>
       <main
-        className={`px-5 ${
+        className={`px-5 justify-center ${
           theme === "dark" ? "dark" : ""
         } min-h-screen h-full ${
           theme === "dark" ? "bg-gray-900 text-white" : "bg-gray-100 text-black"

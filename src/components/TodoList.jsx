@@ -1,9 +1,22 @@
 import React from "react";
 import { DeleteButton, EditButton } from "../Icons";
 
-const TodoList = ({ theme, listItems, searchInput, searchItems, deleteItem, editItem }) => {
+const TodoList = ({
+  theme,
+  listItems,
+  searchInput,
+  searchItems,
+  deleteItem,
+  editItem,
+}) => {
   return (
-    <section className="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-5 pb-20 w-full">
+    <section
+      className={`grid grid-cols-1 sm:grid-cols-3 gap-6 mt-5 pb-20 w-full justify-center ${
+        // Conditional styling for small screens (width < 640px)
+        // Adding "flex" and "justify-center" classes to center the content horizontally
+        theme === "sm" ? "flex justify-center" : ""
+      }`}
+    >
       {searchInput ? (
         // Render the searched items when searchInput is not empty
         searchItems.length > 0 ? (
@@ -12,7 +25,7 @@ const TodoList = ({ theme, listItems, searchInput, searchItems, deleteItem, edit
             return (
               <div
                 key={id}
-                className={`border-2 p-5 rounded-xl w-5/6 sm:96 ${
+                className={`border-2 p-5 rounded-xl justify-center w-full ${
                   theme === "dark" ? "text-white" : "text-black"
                 }`}
               >
@@ -43,7 +56,7 @@ const TodoList = ({ theme, listItems, searchInput, searchItems, deleteItem, edit
             );
           })
         ) : (
-          <div className="text-center col-span-6 font-semibold text-xl items-center">
+          <div className="text-center col-span-6 font-semibold text-xl items-center w-full">
             There are no items with this name found!
           </div>
         )
@@ -54,7 +67,7 @@ const TodoList = ({ theme, listItems, searchInput, searchItems, deleteItem, edit
           return (
             <div
               key={id}
-              className={`border-2 p-5 w-5/6 sm:96 rounded-xl ${
+              className={`border-2 p-5 w-11/12 sm:w-96 rounded-xl justify-center ${
                 theme === "dark" ? "text-white" : "text-black"
               }`}
             >
