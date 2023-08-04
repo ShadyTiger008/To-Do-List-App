@@ -10,13 +10,7 @@ const TodoList = ({
   editItem,
 }) => {
   return (
-    <section
-      className={`grid grid-cols-1 sm:grid-cols-3 gap-6 mt-5 pb-20 w-full justify-center ${
-        // Conditional styling for small screens (width < 640px)
-        // Adding "flex" and "justify-center" classes to center the content horizontally
-        theme === "sm" ? "flex justify-center" : ""
-      }`}
-    >
+    <section className="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-5 pb-20">
       {searchInput ? (
         // Render the searched items when searchInput is not empty
         searchItems.length > 0 ? (
@@ -25,7 +19,7 @@ const TodoList = ({
             return (
               <div
                 key={id}
-                className={`border-2 p-5 rounded-xl justify-center w-full ${
+                className={`border-2 p-5 w-full sm:w-96 rounded-xl ${
                   theme === "dark" ? "text-white" : "text-black"
                 }`}
               >
@@ -56,7 +50,7 @@ const TodoList = ({
             );
           })
         ) : (
-          <div className="text-center col-span-6 font-semibold text-xl items-center w-full">
+          <div className="text-center col-span-6 font-semibold text-xl items-center">
             There are no items with this name found!
           </div>
         )
@@ -67,7 +61,7 @@ const TodoList = ({
           return (
             <div
               key={id}
-              className={`border-2 p-5 w-11/12 sm:w-96 rounded-xl justify-center ${
+              className={`border-2 p-5 w-full sm:w-96 rounded-xl ${
                 theme === "dark" ? "text-white" : "text-black"
               }`}
             >
