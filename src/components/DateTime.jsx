@@ -18,7 +18,7 @@ const DateTime = ({ theme, SunIcon, formattedDate, removeAll }) => {
         <div>
           <button
             onClick={removeAll}
-            className="bg-red-600 text-white px-4 py-2 rounded-md mb-3"
+            className="bg-red-600 text-white px-4 py-2 rounded-md mb-3 hover:scale-90"
           >
             Remove All
           </button>

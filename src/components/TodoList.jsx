@@ -19,7 +19,7 @@ const TodoList = ({
             return (
               <div
                 key={id}
-                className={`border-2 p-5 w-full sm:w-96 rounded-xl ${
+                className={`border-2 p-5 w-full sm:w-96 rounded-xl shadow-xl font-semibold ${
                   theme === "dark" ? "text-white" : "text-black"
                 }`}
               >
@@ -30,7 +30,7 @@ const TodoList = ({
                       onClick={() => {
                         deleteItem(id);
                       }}
-                      className="bg-red-600 text-white px-2 py-1 rounded-md"
+                      className="bg-red-600 text-white px-2 py-1 rounded-md hover:scale-90"
                     >
                       <DeleteButton
                         fill={theme === "dark" ? "white" : "black"}
@@ -40,7 +40,7 @@ const TodoList = ({
                       onClick={() => {
                         editItem(id);
                       }}
-                      className="bg-green-500 text-white px-2 py-1 rounded-md"
+                      className="bg-green-500 text-white px-2 py-1 rounded-md hover:scale-90"
                     >
                       <EditButton fill={theme === "dark" ? "white" : "black"} />
                     </button>
@@ -61,7 +61,7 @@ const TodoList = ({
           return (
             <div
               key={id}
-              className={`border-2 p-5 w-full sm:w-96 rounded-xl ${
+              className={`border-2 p-5 w-full sm:w-96 rounded-xl shadow-xl font-semibold ${
                 theme === "dark" ? "text-white" : "text-black"
               }`}
             >
@@ -72,7 +72,7 @@ const TodoList = ({
                     onClick={() => {
                       deleteItem(id);
                     }}
-                    className="bg-red-600 text-white px-2 py-1 rounded-md"
+                    className="bg-red-600 text-white px-2 py-1 rounded-md hover:scale-90"
                   >
                     <DeleteButton fill={theme === "dark" ? "white" : "black"} />
                   </button>
@@ -80,7 +80,7 @@ const TodoList = ({
                     onClick={() => {
                       editItem(id);
                     }}
-                    className="bg-green-500 text-white px-2 py-1 rounded-md"
+                    className="bg-green-500 text-white px-2 py-1 rounded-md hover:scale-90"
                   >
                     <EditButton fill={theme === "dark" ? "white" : "black"} />
                   </button>

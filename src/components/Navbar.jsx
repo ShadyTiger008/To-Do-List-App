@@ -47,7 +47,7 @@ const Navbar = ({
 
         <button
           onClick={handleThemeSwitch}
-          className={`text-white mx-5 sm:mx-2 ${
+          className={`text-white mx-5 sm:mx-2 hover:scale-90 ${
             theme === "dark" ? "bg-gray-700" : "bg-gray-200"
           } px-4 py-2 rounded-md`}
         >
