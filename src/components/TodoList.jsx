@@ -12,7 +12,7 @@ const TodoList = ({ theme, listItems, searchInput, searchItems, deleteItem, edit
             return (
               <div
                 key={id}
-                className={`border-2 p-5 rounded-xl w-fit ${
+                className={`border-2 p-5 rounded-xl w-5/6 sm:96 ${
                   theme === "dark" ? "text-white" : "text-black"
                 }`}
               >
@@ -54,7 +54,7 @@ const TodoList = ({ theme, listItems, searchInput, searchItems, deleteItem, edit
           return (
             <div
               key={id}
-              className={`border-2 p-5 w-fit rounded-xl ${
+              className={`border-2 p-5 w-5/6 sm:96 rounded-xl ${
                 theme === "dark" ? "text-white" : "text-black"
               }`}
             >
